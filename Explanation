@@ -1,0 +1,6 @@
+这是一个利用PanoramaGL实现的房间全景观看demo
+全景的原理是利用了,鱼眼图(正反) / 六面图(正方体六面)生成了360全景
+其中可以设定不同的点位触发,用来 触发物件 / 触发走动
+不同的房间本质是不同点位的六面图, 行走到不同房间的原理是根据不同的点位重新生成
+PanoramaGL库本身是MRC的, 所以需要在build Phase中将所有的PanoramaGL库文件的compiler flags改为-fno-objc-arc(MRC)
+另需要link binary with libraries: libz.tbd & libxml2.tbd
